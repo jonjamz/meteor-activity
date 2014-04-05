@@ -1,0 +1,61 @@
+<template name="activity">
+
+  <section class="activity-container">
+    <!-- Tabs of activity types including all -->
+    {{> activityTabs}}
+
+    <!-- List of activity items for selected type and current user -->
+    {{> activityList}}
+  </section>
+
+</template>
+
+
+<template name="activityDropdown">
+
+  <section class="activity-dropdown-container">
+    <button>Activity</button>
+
+  </section>
+
+</template>
+
+
+<template name="activityNewCount">
+  {{count}}
+</template>
+
+
+<template name="activityTotalCount">
+  {{count}}
+</template>
+
+
+<template name="activityTabs">
+  {{#if tabs}}
+    <section class="activity-tabs">
+      {{#each tabs}}
+        <!-- Get type from data (should have this sync with API for adding activity types) -->
+        <button class="activity-tab">{{type}}</button>
+      {{/each}}
+    </section>
+  {{/if}}
+</template>
+
+
+<template name="activityList">
+  {{#if itemsExist}}
+    <ul>
+      {{#each items}}
+        <li></li>
+      {{/each}}
+
+      <!-- For infinite scroll -->
+      {{#if exceedsMax}}
+        <button>Load More</button>
+      {{/if}}
+    </ul>
+  {{else}}
+    <p>No items.</p>
+  {{/if}}
+</template>

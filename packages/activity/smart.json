@@ -1,0 +1,9 @@
+{
+  "name": "activity",
+  "description": "User activity notifications for Meteor Accounts.",
+  "homepage": "",
+  "author": "Jonathan James (http://github.com/jonjamz)",
+  "version": "0.0.1",
+  "git": "",
+  "packages": {}
+}
