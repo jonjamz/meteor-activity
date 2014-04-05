@@ -1,5 +1,4 @@
 <template name="activity">
-
   <section class="activity-container">
     <!-- Tabs of activity types including all -->
     {{> activityTabs}}
@@ -7,17 +6,20 @@
     <!-- List of activity items for selected type and current user -->
     {{> activityList}}
   </section>
-
 </template>
 
 
 <template name="activityDropdown">
-
   <section class="activity-dropdown-container">
     <button>Activity</button>
+    <section class="activity-dropdown">
+      <!-- Tabs of activity types including all -->
+      {{> activityTabs}}
 
+      <!-- List of activity items for selected type and current user -->
+      {{> activityList}}
+    </section>
   </section>
-
 </template>
 
 
