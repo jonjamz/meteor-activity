@@ -1,6 +1,6 @@
 if (Meteor.isClient) {
   Template.hello.greeting = function () {
-    if (Meteor.user()) {
+    if (Meteor.user && Meteor.user() && Meteor.user().emails) {
       return "Welcome back " + Meteor.user().emails[0].address;
     }
     return "Welcome to meteor-activity.";
