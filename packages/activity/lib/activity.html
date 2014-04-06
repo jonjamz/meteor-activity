@@ -1,3 +1,4 @@
+<!-- Activity template with shown list -->
 <template name="activity">
   <section class="activity-container">
     <!-- Tabs of activity types including all -->
@@ -8,7 +9,7 @@
   </section>
 </template>
 
-
+<!-- Activity template with button and drop-down list -->
 <template name="activityDropdown">
   <section class="activity-dropdown-container">
     <button>Activity</button>
@@ -22,17 +23,20 @@
   </section>
 </template>
 
-
-<template name="activityNewCount">
-  {{count}}
+<!-- Counters -->
+<template name="activityCountNew">
+  <span class="activity-count-new">{{count}}</span>
 </template>
 
-
-<template name="activityTotalCount">
-  {{count}}
+<template name="activityCountOld">
+  <span class="activity-count-old">{{count}}</span>
 </template>
 
+<template name="activityCountAll">
+  <span class="activity-count-all">{{count}}</span>
+</template>
 
+<!-- Tabs -->
 <template name="activityTabs">
   {{#if tabs}}
     <section class="activity-tabs">
@@ -44,7 +48,7 @@
   {{/if}}
 </template>
 
-
+<!-- Infinite scroll list of activity -->
 <template name="activityList">
   {{#if itemsExist}}
     <ul>
