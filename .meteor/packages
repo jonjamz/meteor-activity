@@ -7,3 +7,5 @@ standard-app-packages
 autopublish
 insecure
 activity
+accounts-password
+accounts-ui
